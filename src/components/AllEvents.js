@@ -1,5 +1,7 @@
 import React from 'react'
+import EventDisplay from './EventDisplay'
 import EventInput from './EventInput'
+
 
 function AllEvents() {
 
@@ -9,7 +11,7 @@ function AllEvents() {
                 <EventInput />
             </div>
             <div>
-                I am an area to display events.
+                <EventDisplay />
             </div>
         </div>
     )
@@ -23,4 +25,6 @@ export default AllEvents
     // Event Date
     // Devent Description
 
-// A space to DISPLAY those entries to the user
+// A space to DISPLAY submitted events to the user
+// A way to EDIT submitted events
+// a way to DELETE submitted events
