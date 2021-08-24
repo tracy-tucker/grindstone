@@ -1,11 +1,11 @@
 import React from 'react';
-import Event from './components/Event'
+import AllEvents from './components/AllEvents'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Event />
+      <AllEvents />
     </div>
   );
 }

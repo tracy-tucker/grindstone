@@ -1,17 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
+import EventInput from './EventInput'
 
 function AllEvents() {
-
-    const [text, setText] = useState('')
 
     return (
         <div>
             <div>
-                <input
-                type="text"
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-                />
+                <EventInput />
             </div>
             <div>
                 I am an area to display events.
