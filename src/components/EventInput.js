@@ -6,20 +6,38 @@ function EventInput() {
         date: "",
         body: ""
     })
-    const [title, setTitle] = useState("")
-    const [date, setDate] = useState("")
-    const [body, setBody] = useState("")
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(formData);
+    }
 
     return (
         <>
         <h1>Create an Event</h1>
-        <form>
+        <form onSubmit={handleSubmit}>
             <label htmlFor="title">Title: </label>
-                <input type="text" name="title" id="title" />
+                <input
+                onChange={(e) => setFormData({...formData, title: e.target.value})}
+                value={formData.title}
+                type="text"
+                name="title"
+                id="title"
+                />
             <label htmlFor="date">/Date: </label>
-                <input type="date" name="date" id="date" />
+                <input
+                onChange={(e) => setFormData({...formData, date: e.target.value})}
+                value={formData.date}
+                type="date"
+                name="date"
+                id="date"
+                />
             <label htmlFor="body">Event Description: </label>
-                <textarea name="body" id="body"></textarea>
+                <textarea
+                onChange={(e) => setFormData({...formData, body: e.target.value})}
+                value={formData.body}
+                name="body"
+                id="body"></textarea>
             <input type="submit" value="Submit" />
         </form>
         </>
