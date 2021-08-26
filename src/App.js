@@ -1,12 +1,16 @@
 import React from 'react';
-import AllEvents from './components/AllEvents'
+import { BrowserRouter as Router, Route } from 'react-router';
+import Dashboard from './Dashboard';
+import Login from './login';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <AllEvents />
-    </div>
+    <Router>
+      <div>
+        <Route exact path="/" component={Dashboard} />
+      </div>
+    </Router>
   );
 }
 
