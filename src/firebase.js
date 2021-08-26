@@ -1,7 +1,8 @@
-import firebase from 'firebase'
+import * as firebase from 'firebase/app'
+import "firebase/auth"
 
 // Initialize access to Firebase
-const firebaseApp = firebase.initializeApp({
+const app = firebase.initializeApp({
   apiKey: "AIzaSyCH09L4i49i-xi6ZBF6ps5GscgNOTfXabM",
   authDomain: "grindstone-c0642.firebaseapp.com",
   projectId: "grindstone-c0642",
@@ -11,10 +12,4 @@ const firebaseApp = firebase.initializeApp({
   measurementId: "G-QH72MGPVLK"
 });
 
-///// Initialize access to Firestore /////
-const db = firebaseApp.firestore()
-
-///// Initialize access to Firebase Authentication /////
-const auth = firebase.auth()
-
-export { db, auth }
+export default app;
