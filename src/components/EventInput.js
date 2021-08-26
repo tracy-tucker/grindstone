@@ -45,3 +45,8 @@ function EventInput() {
 }
 
 export default EventInput
+
+// Need user logged in to use form && logged in as manager
+// Need to create entry, then save in Firestore
+// Need to edit/delete entry
+// Display entry in AllEvents component
