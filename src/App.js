@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Dashboard from './Dashboard';
-import Login from './login';
+import Login from './Login';
 import SignUp from './SignUp'
 import { AuthProvider } from './Auth';
 import PrivateRoute from './PrivateRoute';
